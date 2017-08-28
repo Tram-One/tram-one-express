@@ -1,0 +1,27 @@
+{
+  "name": "tram-one-express",
+  "version": "1.0.0",
+  "description": "Generator to build Tram-One applications quickly",
+  "files": [
+    "template",
+    "generate.js",
+    "prompts.js"
+  ],
+  "main": "prompts.js",
+  "keywords": [
+    "tram-one",
+    "generator"
+  ],
+  "scripts": {
+    "clean": "rm -rf ./tram-one-example",
+    "start": "node prompts.js",
+    "poststart": "npm --prefix ./tram-one-example install ./tram-one-example",
+    "example-start": "npm --prefix ./tram-one-example start",
+    "example-test": "npm --prefix ./tram-one-example test"
+  },
+  "author": "Jesse Jurman",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^3.2.2"
+  }
+}

@@ -1,0 +1,9 @@
+framework: jasmine
+launch_in_dev:
+  - Chrome
+src_files:
+  - ./specs/*.js
+serve_files:
+  - ./spec-bundle.js
+before_tests: browserify ./specs/specs.js -o ./specs/spec-bundle.js
+test_page: ./specs/testem.html
