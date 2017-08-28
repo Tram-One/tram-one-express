@@ -10,7 +10,8 @@ module.exports = (options) => {
 
   const processFile = (file, currentPath) => {
     const filePath = path.join(currentPath, file)
-    const newFilePath =  filePath.replace('template', options.name)
+    // console.log(currentPath)
+    const newFilePath = filePath.replace(path.join(__dirname, 'template'), options.name)
     if (fs.existsSync(filePath) && fs.statSync(filePath).isDirectory()) {
       // if it is the specs folder, and we don't have tests, don't include
       if (!options.tests && filePath === 'template/specs') {
@@ -31,7 +32,7 @@ module.exports = (options) => {
     }
     if (file.match(/.*\..*\.js/)) {
       // process a js template file
-      const jsFile = require(path.relative('../template/', filePath))
+      const jsFile = require(path.join(__dirname, 'template', filePath))
       const resultFile = jsFile(options)
 
       // remove trailing or starting newlines
@@ -55,7 +56,9 @@ module.exports = (options) => {
     }
   }
 
-  const filePath = './template'
+  const filePath = path.join(__dirname, 'template')
+  console.log("CREATING STUFF")
+  console.log(filePath)
   const files = fs.readdirSync(filePath)
   files.forEach((file) => processFile(file, filePath))
 }

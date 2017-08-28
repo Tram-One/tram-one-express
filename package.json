@@ -1,7 +1,8 @@
 {
   "name": "tram-one-express",
-  "version": "1.0.0",
+  "version": "1.0.7",
   "description": "Generator to build Tram-One applications quickly",
+  "bin": "./prompts.js",
   "files": [
     "template",
     "generate.js",
