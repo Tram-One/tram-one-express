@@ -13,7 +13,7 @@
     "generator"
   ],
   "scripts": {
-    "start": "node generator tram-one-example",
+    "start": "node generator.js tram-one-example",
     "poststart": "npm --prefix ./tram-one-example install ./tram-one-example",
     "example-start": "npm --prefix ./tram-one-example start",
     "example-test": "npm --prefix ./tram-one-example test"
