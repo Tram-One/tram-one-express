@@ -37,5 +37,6 @@ const processFile = (file, currentPath) => {
 }
 
 const filePath = path.join(__dirname, 'template')
-console.log(`${Creating} appTitle`)
+console.log(`-.- Creating ${appTitle} `)
 processFile('', filePath)
+console.log('^o^ Finished! ')
