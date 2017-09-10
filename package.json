@@ -1,21 +1,19 @@
 {
   "name": "tram-one-express",
-  "version": "1.0.7",
+  "version": "2.0.0",
   "description": "Generator to build Tram-One applications quickly",
-  "bin": "./prompts.js",
+  "bin": "./generator.js",
   "files": [
     "template",
-    "generate.js",
-    "prompts.js"
+    "generator.js"
   ],
-  "main": "prompts.js",
+  "main": "generator.js",
   "keywords": [
     "tram-one",
     "generator"
   ],
   "scripts": {
-    "clean": "rm -rf ./tram-one-example",
-    "start": "node prompts.js",
+    "start": "node generator tram-one-example",
     "poststart": "npm --prefix ./tram-one-example install ./tram-one-example",
     "example-start": "npm --prefix ./tram-one-example start",
     "example-test": "npm --prefix ./tram-one-example test"
@@ -23,6 +21,8 @@
   "author": "Jesse Jurman",
   "license": "MIT",
   "dependencies": {
-    "inquirer": "^3.2.2"
+    "inquirer": "^3.2.2",
+    "mem-fs": "^1.1.3",
+    "mem-fs-editor": "^3.0.2"
   }
 }
