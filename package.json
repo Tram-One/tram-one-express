@@ -19,6 +19,7 @@
     "example-test": "npm --prefix ./tram-one-example test"
   },
   "author": "Jesse Jurman",
+  "repository": "https://github.com/jrjurman/tram-one-express",
   "license": "MIT",
   "dependencies": {
     "inquirer": "^3.2.2",
