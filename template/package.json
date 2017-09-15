@@ -5,12 +5,9 @@
     "start": "budo main.js:bundle.js --pushstate --dir public --live",
     "prebuild": "cp -r public/ dist",
     "build": "browserify ./main.js -o ./dist/bundle.js -t [ babelify --presets [ env ] ]",
-    "test-build": "browserify ./specs/specs.js -o ./specs/spec-bundle.js -t [ babelify --presets [ env ] ]",
-    "test-dev": "testem -f ./specs/testem.yml",
-    "test": "testem ci -f ./specs/testem.yml"
+    "test": "jasmine ./specs/specs.js"
   },
   "keywords": [
-    "%TITLE%",
     "tram-one"
   ],
   "dependencies": {
@@ -18,7 +15,7 @@
     "babelify": "^7.3.0",
     "browserify": "^14.4.0",
     "budo": "^10.0.4",
-    "testem": "^1.16.2",
+    "jasmine": "^2.8.0",
     "tram-one": "^1.4.1"
   }
 }

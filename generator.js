@@ -2,6 +2,7 @@
 
 const fs = require('fs')
 const path = require('path')
+const spawn = require('cross-spawn');
 
 const appTitle = process.argv[2] || 'tram-one-app'
 
@@ -37,6 +38,12 @@ const processFile = (file, currentPath) => {
 }
 
 const filePath = path.join(__dirname, 'template')
-console.log(`-.- Creating ${appTitle} `)
+const projectPath = path.join(process.cwd(), appTitle)
+console.log(`Creating ${projectPath} `)
+console.log(`Copying over project files`)
 processFile('', filePath)
-console.log('^o^ Finished! ')
+console.log(`Installing NPM Depenedencies`)
+spawn.sync('npm', ['--prefix', projectPath, 'install'], {stdio: 'inherit'});
+console.log('')
+console.log('Finished!')
+console.log(`Navigate to '${appTitle}', and run 'npm start' to get started!`)
