@@ -27,13 +27,17 @@ const processFile = (file, currentPath) => {
   }
 
   // copy a file
-  const normalFile = fs.readFileSync(filePath)
-    .toString()
-    .replace('%TITLE%', appTitle)
   if (fs.existsSync(newFilePath)) {
     console.warn(`File ${newFilePath} already exists`)
   } else {
-    fs.appendFileSync(newFilePath, normalFile)
+    const newFile = fs.readFileSync(filePath)
+    if (!filePath.match(/.*\.png/)) {
+      // if it's not a binary file, treat it as a template
+      const templateFile = newFile.toString().replace('%TITLE%', appTitle)
+      fs.appendFileSync(newFilePath, templateFile)
+    } else {
+      fs.appendFileSync(newFilePath, newFile)
+    }
   }
 }
 
