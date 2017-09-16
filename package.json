@@ -15,6 +15,7 @@
   "scripts": {
     "start": "node generator.js tram-one-example",
     "poststart": "npm --prefix ./tram-one-example install ./tram-one-example",
+    "lint": "xo ./generator.js",
     "example-start": "npm --prefix ./tram-one-example start",
     "example-test": "npm --prefix ./tram-one-example test"
   },
@@ -25,5 +26,16 @@
     "cross-spawn": "^5.1.0",
     "mem-fs": "^1.1.3",
     "mem-fs-editor": "^3.0.2"
+  },
+  "devDependencies": {
+    "xo": "^0.18.2"
+  },
+  "xo": {
+    "semicolon": false,
+    "space": 2,
+    "rules": {
+      "capitalized-comments": [ "error", "never" ],
+      "arrow-parens": [ "error", "as-needed", { "requireForBlockBody": true } ]
+    }
   }
 }
