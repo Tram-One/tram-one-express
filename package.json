@@ -23,7 +23,8 @@
   "repository": "https://github.com/jrjurman/tram-one-express",
   "license": "MIT",
   "dependencies": {
-    "cross-spawn": "^5.1.0"
+    "cross-spawn": "^5.1.0",
+    "fs-extra": "^4.0.2"
   },
   "devDependencies": {
     "xo": "^0.18.2"
