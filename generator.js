@@ -35,7 +35,7 @@ const processFile = (file, currentPath) => {
       fs.appendFileSync(newFilePath, newFile)
     } else {
       // if it's not a binary file, treat it as a template
-      const templateFile = newFile.toString().replace('%TITLE%', appTitle)
+      const templateFile = newFile.toString().replace(/%TITLE%/g, appTitle)
       fs.appendFileSync(newFilePath, templateFile)
     }
   }
