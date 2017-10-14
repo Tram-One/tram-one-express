@@ -5,7 +5,7 @@ module.exports = () => {
   return html`
     <div>
       <h1>404</h1>
-      <code>No route ${window.location.pathname}</code><br>
+      <code>No route ${window.location.pathname}</code><br />
       Check <code>%TITLE%/main.js</code> to see all the available routes.
     </div>
   `
