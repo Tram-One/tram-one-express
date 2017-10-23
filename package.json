@@ -15,7 +15,7 @@
   "scripts": {
     "start": "node generator.js tram-one-example",
     "poststart": "npm --prefix ./tram-one-example install ./tram-one-example",
-    "lint": "xo ./generator.js",
+    "lint": "xo generator.js",
     "example-start": "npm --prefix ./tram-one-example start",
     "example-test": "npm --prefix ./tram-one-example test"
   },
@@ -27,23 +27,12 @@
     "fs-extra": "^4.0.2"
   },
   "devDependencies": {
+    "eslint-config-tram-one": "^1.1.0",
     "xo": "^0.18.2"
   },
   "xo": {
-    "semicolon": false,
-    "space": 2,
-    "rules": {
-      "capitalized-comments": [
-        "error",
-        "never"
-      ],
-      "arrow-parens": [
-        "error",
-        "as-needed",
-        {
-          "requireForBlockBody": true
-        }
-      ]
-    }
+    "extends": [
+      "tram-one"
+    ]
   }
 }

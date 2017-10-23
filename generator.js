@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 
-const fs = require('fs-extra')
 const path = require('path')
+const fs = require('fs-extra')
 const spawn = require('cross-spawn')
 
 const appTitle = process.argv[2] || 'tram-one-app'
@@ -48,9 +48,9 @@ console.log(`Copying over project files`)
 processFile('', filePath)
 console.log(`Installing NPM Depenedencies`)
 spawn.sync('npm', ['--prefix', projectPath, 'install'], {stdio: 'inherit'})
-fs.remove(path.join(projectPath, 'etc'), function(err) {
-  if (err) throw err;
-});
+fs.remove(path.join(projectPath, 'etc'), (err) => {
+  if (err) throw err
+})
 console.log('')
 console.log('Finished!')
 console.log(`Navigate to '${appTitle}', and run 'npm start' to get started!`)
