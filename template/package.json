@@ -16,6 +16,6 @@
     "browserify": "^14.4.0",
     "budo": "^10.0.4",
     "jasmine": "^2.8.0",
-    "tram-one": "^4.0.0"
+    "tram-one": "^4.1.1"
   }
 }
