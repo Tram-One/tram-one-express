@@ -17,6 +17,7 @@
     "poststart": "npm --prefix ./tram-one-example install ./tram-one-example",
     "lint": "xo generator.js",
     "example-start": "npm --prefix ./tram-one-example start",
+    "preexample-test": "npm run start",
     "example-test": "npm --prefix ./tram-one-example test"
   },
   "author": "Jesse Jurman",
