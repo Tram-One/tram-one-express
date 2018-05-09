@@ -1,6 +1,6 @@
 {
   "name": "tram-one-express",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "description": "Generator to build Tram-One applications quickly",
   "bin": "./generator.js",
   "files": [
@@ -17,6 +17,7 @@
     "poststart": "npm --prefix ./tram-one-example install ./tram-one-example",
     "lint": "xo generator.js",
     "example-start": "npm --prefix ./tram-one-example start",
+    "preexample-test": "npm run start",
     "example-test": "npm --prefix ./tram-one-example test"
   },
   "author": "Jesse Jurman",
