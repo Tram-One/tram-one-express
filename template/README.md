@@ -7,7 +7,8 @@
 
 ## Developement Commands
 Below are a list of commands used for developement. The logic for all the commands are in the local `package.json`
-- `npm start` - starts a server hosting the webapp on localhost using [webpack-serve](https://github.com/webpack-contrib/webpack-serve)
+- `npm start` - starts a server hosting the webapp on localhost using
+[webpack-serve](https://github.com/webpack-contrib/webpack-serve)
 and will watch for changes
 - `npm run build` - builds a final distributable using
 [webpack](https://webpack.js.org/)
