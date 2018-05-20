@@ -2,20 +2,19 @@
   "name": "%TITLE%",
   "version": "1.0.0",
   "scripts": {
-    "start": "budo main.js:bundle.js --pushstate --dir public --live",
-    "prebuild": "cp -r public/ dist",
-    "build": "browserify ./main.js -o ./dist/bundle.js -t [ babelify --presets [ env ] ]",
+    "start": "webpack-serve --content ./public",
+    "prebuild": "cp -r ./public/ dist",
+    "build": "webpack",
     "test": "jasmine ./specs/specs.js"
   },
   "keywords": [
     "tram-one"
   ],
   "dependencies": {
-    "babel-preset-env": "^1.6.0",
-    "babelify": "^7.3.0",
-    "browserify": "^14.4.0",
-    "budo": "^10.0.4",
     "jasmine": "^2.8.0",
-    "tram-one": "^5.2.1"
+    "tram-one": "^6.1.0",
+    "webpack": "^4.8.3",
+    "webpack-command": "^0.2.0",
+    "webpack-serve": "^1.0.2"
   }
 }
