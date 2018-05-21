@@ -2,7 +2,7 @@
   "name": "%TITLE%",
   "version": "1.0.0",
   "scripts": {
-    "start": "webpack-serve --content ./public",
+    "start": "webpack-serve",
     "prebuild": "cp -r ./public/ dist",
     "build": "webpack",
     "test": "jasmine ./specs/specs.js"
@@ -13,6 +13,7 @@
   "dependencies": {
     "jasmine": "^2.8.0",
     "tram-one": "^6.1.0",
+    "tram-dev-server-config": "^1.0.0",
     "webpack": "^4.8.3",
     "webpack-command": "^0.2.0",
     "webpack-serve": "^1.0.2"
