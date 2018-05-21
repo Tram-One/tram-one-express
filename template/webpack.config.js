@@ -11,3 +11,5 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   }
 }
+
+module.exports.serve = require('tram-dev-server-config')
