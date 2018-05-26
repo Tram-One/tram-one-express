@@ -1,6 +1,6 @@
 {
   "name": "tram-one-express",
-  "version": "9.0.0",
+  "version": "9.0.1",
   "description": "Generator to build Tram-One applications quickly",
   "bin": "./generator.js",
   "files": [
@@ -13,11 +13,13 @@
     "generator"
   ],
   "scripts": {
-    "start": "node generator.js tram-one-example",
-    "poststart": "npm --prefix ./tram-one-example install ./tram-one-example",
     "lint": "xo generator.js",
+    "example-generate": "node generator.js tram-one-example",
+    "postexample-generate": "npm --prefix ./tram-one-example install",
+    "example-build": "npm --prefix ./tram-one-example run build",
     "example-start": "npm --prefix ./tram-one-example start",
-    "preexample-test": "npm run start",
+    "example-start-and-kill": "(npm run example-start) & (sleep 5 && npm run example-check) & (sleep 8 && pkill webpack-serve)",
+    "example-check": "jasmine tests/verify-server.js",
     "example-test": "npm --prefix ./tram-one-example test"
   },
   "author": "Jesse Jurman",
@@ -29,6 +31,9 @@
   },
   "devDependencies": {
     "eslint-config-tram-one": "^1.1.0",
+    "jasmine": "^3.1.0",
+    "nightmare": "^3.0.1",
+    "node-fetch": "^2.1.2",
     "xo": "^0.18.2"
   },
   "xo": {
