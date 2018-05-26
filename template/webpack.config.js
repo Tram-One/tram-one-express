@@ -12,6 +12,6 @@ module.exports = {
   }
 }
 
-if (process.argv[1].split('/').includes('webpack-serve')) {
+if (process.argv[1].split(path.sep).includes('webpack-serve')) {
   module.exports.serve = require('tram-dev-server-config')
 }
