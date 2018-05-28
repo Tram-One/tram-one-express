@@ -48,5 +48,5 @@ Below are a list of commands used for developement. The logic for all the comman
 - `npm run example-build` - runs `npm run build` in the example project
 - `npm run example-start` - runs the start script, which kicks off a webpack server
 - `npm run example-start-and-kill` - runs the webpack server, and then runs jasmine tests against the server (verifying that the default pages load correctly)
-- `npm run example-check` - the tests run against the example server in `example-start-and-kill`, can also be run independently after starting the example app
+- `npm run example-check` - verifies default pages load correctly for a running instance of the example app (used in example-start-and-kill)
 - `npm run example-test` - runs the test suite for the example app
