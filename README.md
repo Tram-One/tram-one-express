@@ -43,4 +43,10 @@ app-name/
 
 ## Developement Commands
 Below are a list of commands used for developement. The logic for all the commands are in the local `package.json`
-- `npm start` - creates an example app `tram-one-example`
+- `npm run generate-example` - alias for `example-generate`
+- `npm run example-generate` - creates an example app and installs dependencies in the example
+- `npm run example-build` - runs `npm run build` in the example project
+- `npm run example-start` - runs the start script, which kicks off a webpack server
+- `npm run example-start-and-kill` - runs the webpack server, and then runs jasmine tests against the server (verifying that the default pages load correctly)
+- `npm run example-check` - the tests run against the example server in `example-start-and-kill`, can also be run independently after starting the example app
+- `npm run example-test` - runs the test suite for the example app

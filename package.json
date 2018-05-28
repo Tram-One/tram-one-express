@@ -14,7 +14,8 @@
   ],
   "scripts": {
     "lint": "xo generator.js",
-    "example-generate": "node generator.js tram-one-example",
+    "generate-example": "npm run example-generate",
+    "example-generate": "rm -rf tram-one-example && node generator.js tram-one-example",
     "postexample-generate": "npm --prefix ./tram-one-example install",
     "example-build": "npm --prefix ./tram-one-example run build",
     "example-start": "npm --prefix ./tram-one-example start",
