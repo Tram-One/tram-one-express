@@ -1,6 +1,6 @@
 {
   "name": "tram-one-express",
-  "version": "9.0.2",
+  "version": "9.1.0",
   "description": "Generator to build Tram-One applications quickly",
   "bin": "./generator.js",
   "files": [
@@ -14,7 +14,8 @@
   ],
   "scripts": {
     "lint": "xo generator.js",
-    "example-generate": "node generator.js tram-one-example",
+    "generate-example": "npm run example-generate",
+    "example-generate": "rm -rf tram-one-example && node generator.js tram-one-example",
     "postexample-generate": "npm --prefix ./tram-one-example install",
     "example-build": "npm --prefix ./tram-one-example run build",
     "example-start": "npm --prefix ./tram-one-example start",
