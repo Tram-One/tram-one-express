@@ -3,10 +3,13 @@ const html = Tram.html({
   'app-header': require('../elements/app-header')
 })
 
-module.exports = () => {
+module.exports = (store, actions) => {
+  const advanceColor = () => {
+    actions.advance()
+  }
   return html`
     <div>
-      <app-header />
+      <app-header color=${store.color} onclick=${advanceColor} />
       <div>
         Thank you for using Tram-One!<br />
         To get started, edit <code>%TITLE%/pages/home.js</code>.
