@@ -1,12 +1,12 @@
 # %TITLE%
 
-## Developement Instructions
+## Development instructions
 1. In the root directory, run `npm install` to install all the project dependencies
 2. Run `npm start` to start the dev server
 3. Navigate to http://localhost:8080 (or the url provided after running `npm start`)
 
-## Developement Commands
-Below are a list of commands used for developement. The logic for all the commands are in the local `package.json`
+## Development commands
+Below are a list of commands used for development. The logic for all the commands is in the local `package.json`
 - `npm start` - starts a server hosting the webapp on localhost using
 [webpack-serve](https://github.com/webpack-contrib/webpack-serve)
 and will watch for changes
