@@ -19,9 +19,10 @@
     "postexample-generate": "npm --prefix ./tram-one-example install",
     "example-build": "npm --prefix ./tram-one-example run build",
     "example-start": "npm --prefix ./tram-one-example start",
-    "example-start-and-kill": "(npm run example-start) & (sleep 5 && npm run example-check) & (sleep 8 && pkill webpack-serve)",
+    "example-start-and-kill": "(npm run example-start) & (sleep 5 && npm run example-check) && (npm run kill-webpack)",
     "example-check": "jasmine tests/verify-server.js",
-    "example-test": "npm --prefix ./tram-one-example test"
+    "example-test": "npm --prefix ./tram-one-example test",
+    "kill-webpack": "pkill -f webpack-dev-server"
   },
   "author": "Jesse Jurman",
   "repository": "https://github.com/jrjurman/tram-one-express",
