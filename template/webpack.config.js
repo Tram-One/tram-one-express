@@ -3,7 +3,7 @@ const path = require('path')
 module.exports = {
   entry: './main.js',
   devServer: {
-    contentBase: './dist',
+    contentBase: './public',
     historyApiFallback: true,
     hot: true,
     inline: true

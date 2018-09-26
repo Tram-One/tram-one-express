@@ -4,6 +4,12 @@ const browser = nightmare({
   // show: true
 })
 
+browser.on('page', (type, message, stack) => {
+  if (type === 'error') {
+    fail(`Error was thrown on the page: ${message}`)
+  }
+})
+
 describe('Tram-One Example on Webpack dev server', () => {
   describe('HomePage', () => {
     it('should have the default title', (done) => {
@@ -21,6 +27,15 @@ describe('Tram-One Example on Webpack dev server', () => {
         .evaluate(() => document.querySelector('code').outerText)
         .then(errorMessage => {
           expect(errorMessage).toBe('No route /invalid-page')
+          done()
+        })
+    })
+
+    it('should show the error message with a deep route', (done) => {
+      browser.goto('http://localhost:8080/test/invalid-page')
+        .evaluate(() => document.querySelector('code').outerText)
+        .then(errorMessage => {
+          expect(errorMessage).toBe('No route /test/invalid-page')
           done()
         })
     })

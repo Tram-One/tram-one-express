@@ -2,7 +2,6 @@
   "name": "%TITLE%",
   "version": "1.0.0",
   "scripts": {
-    "prestart": "npm run build",
     "start": "DEVELOPMENT=true webpack-dev-server --open --hot --inline=true",
     "prebuild": "cp -r ./public/ dist",
     "build": "webpack",
