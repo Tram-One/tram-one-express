@@ -31,7 +31,7 @@ const processFile = (file, currentPath) => {
     console.warn(`File ${newFilePath} already exists`)
   } else {
     const newFile = fs.readFileSync(filePath)
-    if (filePath.match(/.*\.png/)) {
+    if (filePath.match(/.*\.(png|ttf)/)) {
       fs.appendFileSync(newFilePath, newFile)
     } else {
       // if it's not a binary file, treat it as a template

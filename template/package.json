@@ -2,7 +2,7 @@
   "name": "%TITLE%",
   "version": "1.0.0",
   "scripts": {
-    "start": "webpack-serve",
+    "start": "DEVELOPMENT=true webpack-dev-server --open --hot --inline=true",
     "prebuild": "cp -r ./public/ dist",
     "build": "webpack",
     "test": "jasmine ./specs/specs.js"
@@ -13,9 +13,8 @@
   "dependencies": {
     "jasmine": "^2.8.0",
     "tram-one": "^7.0.0",
-    "tram-dev-server-config": "^1.0.1",
     "webpack": "^4.8.3",
-    "webpack-command": "^0.2.0",
-    "webpack-serve": "^1.0.2"
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.8"
   }
 }
