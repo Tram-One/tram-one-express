@@ -36,5 +36,7 @@ jobs:
       - run: npm run lint
       - run: npm run example-generate
       - run: npm run example-build
-      - run: npm run example-start-and-kill
+      - run: npm run example-start & sleep 5
+      - run: npm run example-check
+      - run: npm run kill-webpack
       - run: npm run example-test
