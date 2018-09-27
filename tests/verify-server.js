@@ -4,9 +4,9 @@ const browser = nightmare({
   // show: true
 })
 
-browser.on('page', (type, message, stack) => {
+browser.on('page', (type) => {
   if (type === 'error') {
-    fail(`Error was thrown on the page: ${message}`)
+    fail(`Error was thrown on the page`)
   }
 })
 
