@@ -23,8 +23,7 @@
     "example-check": "jasmine tests/verify-server.js",
     "example-test": "npm --prefix ./tram-one-example test",
     "example-browser-test": "testem ci -f tests/testem.yml",
-    "example-browser-test-dev": "testem -f tests/testem.yml",
-    "ci-run": "npm run lint && npm run example-generate && npm run example-build && npm run example-start-and-kill && npm run example-test"
+    "example-browser-test-dev": "testem -f tests/testem.yml"
   },
   "author": "Jesse Jurman",
   "repository": "https://github.com/jrjurman/tram-one-express",
