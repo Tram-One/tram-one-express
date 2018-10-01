@@ -1,0 +1,9 @@
+framework: jasmine
+host: 127.0.0.1
+launch_in_dev:
+  - phantomjs
+src_files:
+  - tram-one-example/bundle.js
+  - tests/testem-spec.js
+test_page: tests/testem.html
+parallel: 10

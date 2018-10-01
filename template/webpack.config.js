@@ -1,5 +1,5 @@
 const path = require('path')
-
+const moduleConfig = require('./webpack-module.config')
 module.exports = {
   entry: './main.js',
   devServer: {
@@ -8,7 +8,8 @@ module.exports = {
     hot: true,
     inline: true
   },
-  mode: process.env.DEVELOPMENT ? 'development' : 'production',
+  mode: process.env.NODE_ENV,
+  module: moduleConfig(process.env.NODE_ENV),
   externals: {
     domino: 'domino'
   },
