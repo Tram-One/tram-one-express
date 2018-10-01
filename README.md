@@ -47,6 +47,8 @@ Below are a list of commands used for developement. The logic for all the comman
 - `npm run example-generate` - creates an example app and installs dependencies in the example
 - `npm run example-build` - runs `npm run build` in the example project
 - `npm run example-start` - runs the start script, which kicks off a webpack server
-- `npm run example-start-and-kill` - runs the webpack server, and then runs jasmine tests against the server (verifying that the default pages load correctly)
+- `npm run example-start-and-kill` - runs the webpack dev server, and then runs jasmine tests against the server (verifying that the default pages load correctly, and without any errors)
 - `npm run example-check` - verifies default pages load correctly for a running instance of the example app (used in example-start-and-kill)
 - `npm run example-test` - runs the test suite for the example app
+- `example-browser-test` - runs tests for all locally available browsers, making sure that tram-one is able to render correctly for each one
+- `ci-run` - runs all the commands in the order that circleci would trigger them, one automatically after the other

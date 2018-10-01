@@ -9,7 +9,7 @@ module.exports = (nodeEnv) => ({
             [
               "@babel/preset-env",
               {
-                targets: "> 5%",
+                targets: "> 2.5%",
                 useBuiltIns: 'entry',
                 forceAllTransforms: nodeEnv === 'production'
               }
