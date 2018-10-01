@@ -23,7 +23,8 @@
     "example-check": "jasmine tests/verify-server.js",
     "example-test": "npm --prefix ./tram-one-example test",
     "example-browser-test": "testem ci -f tests/testem.yml",
-    "example-browser-test-dev": "testem -f tests/testem.yml"
+    "example-browser-test-dev": "testem -f tests/testem.yml",
+    "ci-run": "node tests/circleci-run.js"
   },
   "author": "Jesse Jurman",
   "repository": "https://github.com/jrjurman/tram-one-express",
@@ -37,6 +38,7 @@
     "jasmine": "^3.1.0",
     "nightmare": "^3.0.1",
     "node-fetch": "^2.1.2",
+    "require-yml": "^1.3.1",
     "testem": "^2.0.0",
     "xo": "^0.18.2"
   },
