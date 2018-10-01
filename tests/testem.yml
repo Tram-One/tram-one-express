@@ -1,0 +1,6 @@
+framework: jasmine
+host: 127.0.0.1
+launch_in_dev:
+  - phantomjs
+test_page: tests/testem.html
+parallel: 10

@@ -1,4 +1,5 @@
 const Tram = require('tram-one')
+require("babel-polyfill")
 
 const app = new Tram()
 app.addRoute('/', require('./pages/home'))

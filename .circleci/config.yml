@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/node:8-browsers
+      - image: circleci/node:8-browsers-legacy
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -35,6 +35,7 @@ jobs:
 
       - run: npm run lint
       - run: npm run example-generate
+      - run: npm run example-test
       - run: npm run example-build
       - run: npm run example-start-and-kill
-      - run: npm run example-test
+      - run: npm run example-browser-test
