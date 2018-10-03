@@ -1,6 +1,6 @@
 {
   "name": "tram-one-express",
-  "version": "12.0.0",
+  "version": "12.1.0",
   "description": "Generator to build Tram-One applications quickly",
   "bin": "./generator.js",
   "files": [
