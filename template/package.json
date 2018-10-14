@@ -5,7 +5,8 @@
     "start": "NODE_ENV=development webpack-dev-server --open --hot --inline=true",
     "prebuild": "cp -r ./public/ dist",
     "build": "NODE_ENV=production webpack",
-    "test": "jasmine ./specs/specs.js"
+    "test": "jasmine ./specs/specs.js",
+    "postbuild": "tram-build-page -a './main.js' -r '/' -i './public/index.html' -o './dist/index.html'"
   },
   "keywords": [
     "tram-one"
@@ -16,6 +17,7 @@
     "babel-loader": "^8.0.4",
     "babel-polyfill": "^6.26.0",
     "jasmine": "^2.8.0",
+    "tram-build-page": "^1.0.1",
     "tram-one": "^7.1.0",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.1",
