@@ -6,7 +6,8 @@ module.exports = {
     contentBase: './public',
     historyApiFallback: true,
     hot: true,
-    inline: true
+    inline: true,
+    host: '0.0.0.0'
   },
   mode: process.env.NODE_ENV,
   module: moduleConfig(process.env.NODE_ENV),
