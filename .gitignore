@@ -5,6 +5,9 @@ logs
 *.log
 *.log.*
 
+# Test Artifacts
+tests/no-js-result.html
+
 # dependencies
 node_modules
 
