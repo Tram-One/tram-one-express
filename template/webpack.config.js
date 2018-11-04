@@ -8,7 +8,7 @@ const dehydratedIndex = buildPage({
   indexPath: './public/index.html'
 })
 
-module.exports = {
+module.exports = env => ({
   entry: './main.js',
   devServer: {
     before: app => {
@@ -29,8 +29,8 @@ module.exports = {
     inline: true,
     host: '0.0.0.0'
   },
-  mode: process.env.NODE_ENV,
-  module: moduleConfig(process.env.NODE_ENV),
+  mode: env,
+  module: moduleConfig(env),
   externals: {
     domino: 'domino'
   },
@@ -38,4 +38,4 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   }
-}
+})
