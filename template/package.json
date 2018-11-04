@@ -2,9 +2,9 @@
   "name": "%TITLE%",
   "version": "1.0.0",
   "scripts": {
-    "start": "NODE_ENV=development webpack-dev-server --open --hot --inline=true",
+    "start": "webpack-dev-server --env development --open --hot --inline=true",
     "prebuild": "cp -r ./public/ dist",
-    "build": "NODE_ENV=production webpack",
+    "build": "webpack --env production",
     "test": "jasmine ./specs/specs.js",
     "postbuild": "tram-build-page -a './main.js' -r '/no-js' -i './public/index.html' -o './dist/index.html'"
   },
