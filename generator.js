@@ -1,8 +1,8 @@
 #! /usr/bin/env node
 
 const path = require('path')
+const {execSync} = require('child_process')
 const fs = require('fs-extra')
-const spawn = require('cross-spawn')
 
 const appTitle = process.argv[2] || 'tram-one-app'
 
@@ -44,13 +44,10 @@ const processFile = (file, currentPath) => {
 const filePath = path.join(__dirname, 'template')
 const projectPath = path.join(process.cwd(), appTitle)
 console.log(`Creating ${projectPath} `)
-console.log(`Copying over project files`)
+console.log('Copying over project files')
 processFile('', filePath)
-console.log(`Installing NPM Depenedencies`)
-spawn.sync('npm', ['--prefix', projectPath, 'install'], {stdio: 'inherit'})
-fs.remove(path.join(projectPath, 'etc'), (err) => {
-  if (err) throw err
-})
+console.log('Installing NPM Depenedencies')
+execSync('npm install', {cwd: projectPath, stdio: 'inherit'})
 console.log('')
 console.log('Finished!')
 console.log(`Navigate to '${appTitle}', and run 'npm start' to get started!`)

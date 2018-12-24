@@ -5,17 +5,16 @@
     "start": "webpack-dev-server --env development --open --hot --inline=true",
     "prebuild": "cp -r ./public/ dist",
     "build": "webpack --env production",
-    "test": "jasmine ./specs/specs.js",
-    "postbuild": "tram-build-page -a './main.js' -r '/no-js' -i './public/index.html' -o './dist/index.html'"
+    "test": "jasmine ./specs/specs.js"
   },
   "keywords": [
     "tram-one"
   ],
   "dependencies": {
     "@babel/core": "^7.1.2",
+    "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "babel-loader": "^8.0.4",
-    "babel-polyfill": "^6.26.0",
     "jasmine": "^2.8.0",
     "tram-build-page": "^1.0.1",
     "tram-one": "^7.1.0",

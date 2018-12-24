@@ -12,10 +12,9 @@
 Tram-One Express is a generator for building tram-one applications.
 
 ## Usage
-To use tram-one-express, install using npm, and then run the command with the name of the app you want to build:
+To use tram-one-express, run using `npx`, and pass the app-name of what project you want to create:
 ```
-$ npm install -g tram-one-express
-$ tram-one-express app-name
+$ npx tram-one-express app-name
 ```
 This will create a directory in your current directory with the name that you pass into tram-one-express.
 
