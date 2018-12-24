@@ -18,7 +18,7 @@ describe('Tram-One Example on Webpack dev server (with JS off)', () => {
       .html('./tests/no-js-result.html', 'HTMLOnly')
       .then(() => done())
   })
-  it('should show default page when JS is disabled', (done) => {
+  it('should show the main page with the JS off alert', (done) => {
     fs.readFile('./tests/no-js-result.html', 'utf8', function(err, html){
       if (err) fail('Could not read no-js-result.html')
       expect(html).toContain('It looks like JS has been disabled.')
