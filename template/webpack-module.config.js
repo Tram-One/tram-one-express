@@ -11,7 +11,7 @@ module.exports = (nodeEnv) => nodeEnv === 'development' ?
             [
               "@babel/preset-env",
               {
-                targets: "> 2.5%, ie >= 11",
+                targets: "> 2.5%",
                 useBuiltIns: false
               }
             ]
