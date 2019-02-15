@@ -4,6 +4,7 @@ module.exports = (nodeEnv) => nodeEnv === 'development' ?
 ({
   rules: [
     {
+      test: /\.js$/,
       use: {
         loader: 'babel-loader',
         options: {

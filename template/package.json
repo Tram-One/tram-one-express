@@ -2,9 +2,9 @@
   "name": "%TITLE%",
   "version": "1.0.0",
   "scripts": {
-    "start": "webpack-dev-server --env development --open --hot --inline=true",
+    "start": "webpack-dev-server --config ./webpack/webpack.config.js --env development --open --hot --inline",
     "prebuild": "cp -r ./public/ dist",
-    "build": "webpack --env production",
+    "build": "webpack --config ./webpack/webpack.config.js --env production",
     "test": "jasmine ./specs/specs.js"
   },
   "keywords": [
@@ -15,8 +15,9 @@
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "babel-loader": "^8.0.4",
+    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-template": "^6.2.0",
     "jasmine": "^2.8.0",
-    "tram-build-page": "^1.0.1",
     "tram-one": "^7.1.0",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.1",
