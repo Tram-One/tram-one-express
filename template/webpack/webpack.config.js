@@ -10,7 +10,7 @@ module.exports = env => {
       hot: true,
       inline: true,
       host: '127.0.0.1',
-      https: true,
+      https: false,
       disableHostCheck: true,
       historyApiFallback: true
     },
@@ -21,7 +21,8 @@ module.exports = env => {
     },
     output: {
       filename: 'bundle.js',
-      path: path.resolve(__dirname, 'dist')
+      publicPath: '/',
+      path: path.resolve(__dirname, '..', 'dist')
     },
     plugins: [
       ...HtmlWebpackConfig()
