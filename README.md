@@ -22,22 +22,19 @@ This will create a directory in your current directory with the name that you pa
 Below are a list of files and directories that are created after running tram-one-express
 ```
 app-name/
-├── README.md
-├── elements
-│   └── header.js
-├── main.js
+├── src
+│   ├── components
+│   │   └── ColorHeader
+│   │       ├── ColorHeader.js
+│   │       ├── ColorHeader.scss
+│   │       ├── ColorHeader.test.js
+│   │       └── index.js
+│   ├── index.js
+│   └── styles.css
+├── .gitignore
+├── index.html
 ├── package.json
-├── pages
-│   ├── 404.js
-│   └── home.js
-├── public
-│   ├── favicon.png
-│   └── index.html
-└── specs
-    ├── header-spec.js
-    ├── specs.js
-    ├── testem.html
-    └── testem.yml
+└── README.md
 ```
 
 ## Developement Commands
@@ -45,9 +42,5 @@ Below are a list of commands used for developement. The logic for all the comman
 - `npm run generate-example` - alias for `example-generate`
 - `npm run example-generate` - creates an example app and installs dependencies in the example
 - `npm run example-build` - runs `npm run build` in the example project
-- `npm run example-start` - runs the start script, which kicks off a webpack server
-- `npm run example-start-and-kill` - runs the webpack dev server, and then runs jasmine tests against the server (verifying that the default pages load correctly, and without any errors)
-- `npm run example-check` - verifies default pages load correctly for a running instance of the example app (used in example-start-and-kill)
 - `npm run example-test` - runs the test suite for the example app
-- `example-browser-test` - runs tests for all locally available browsers, making sure that tram-one is able to render correctly for each one
 - `ci-run` - runs all the commands in the order that circleci would trigger them, one automatically after the other

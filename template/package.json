@@ -2,24 +2,30 @@
   "name": "%TITLE%",
   "version": "1.0.0",
   "scripts": {
-    "start": "webpack-dev-server --env development --open --hot --inline=true",
-    "prebuild": "cp -r ./public/ dist",
-    "build": "webpack --env production",
-    "test": "jasmine ./specs/specs.js"
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html",
+    "test": "jest --watch"
+  },
+  "dependencies": {
+    "@babel/core": "7.2.0",
+    "@babel/preset-env": "^7.4.5",
+    "babel-jest": "^24.8.0",
+    "jest": "^24.8.0",
+    "jest-transform-stub": "^2.0.0",
+    "parcel-bundler": "^1.6.1",
+    "sass": "^1.20.1",
+    "tram-one": "^8.0.1"
   },
   "keywords": [
     "tram-one"
   ],
-  "dependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/polyfill": "^7.0.0",
-    "@babel/preset-env": "^7.1.0",
-    "babel-loader": "^8.0.4",
-    "jasmine": "^2.8.0",
-    "tram-build-page": "^1.0.1",
-    "tram-one": "^7.1.0",
-    "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.1",
-    "webpack-dev-server": "^3.1.8"
+  "babel": {
+    "presets": ["@babel/preset-env"]
+  },
+  "jest": {
+    "transform": {
+      ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
+      "^.+\\.js$": "babel-jest"
+    }
   }
 }
