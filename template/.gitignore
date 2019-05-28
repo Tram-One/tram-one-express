@@ -1,8 +1,8 @@
 # Distributable
 dist
 
-# Files built when testing
-specs/spec-bundle.js
+# Parcel Dev Artifacts
+.cache
 
 # Logs
 logs
