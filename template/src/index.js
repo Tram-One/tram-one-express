@@ -10,9 +10,7 @@ const home = () => {
   return html`
     <div>
       <ColorHeader />
-      <body>
-        Thank you for using Tram-One!
-      </body>
+      Thank you for using Tram-One!
     </div>
   `
 }
