@@ -12,7 +12,7 @@ export default () => {
 
   return html`
     <h1
-      classname="color-header"
+      class="color-header"
       style="color:${colors[colorIndex]}"
       onclick=${updateOnTitleClick}
     >
