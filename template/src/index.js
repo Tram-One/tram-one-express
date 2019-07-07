@@ -1,3 +1,4 @@
+import "babel-polyfill";
 import { registerHtml, start } from "tram-one"
 import ColorHeader from "./components/ColorHeader"
 import "./styles.css"
