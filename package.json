@@ -39,6 +39,7 @@
   "xo": {
     "extends": [
       "tram-one"
-    ]
+    ],
+    "prettier": true
   }
 }
