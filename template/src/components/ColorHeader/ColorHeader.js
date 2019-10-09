@@ -1,5 +1,7 @@
 import { registerHtml, useState } from "tram-one"
 import "./ColorHeader.scss"
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 const html = registerHtml()
 
 export default () => {
