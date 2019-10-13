@@ -2,7 +2,6 @@
   "name": "%TITLE%",
   "version": "1.0.0",
   "scripts": {
-    "prebuild": "shx rm -rf dist",
     "start": "parcel src/index.html --open",
     "build": "parcel build src/index.html",
     "test": "jest src --watch"
@@ -16,7 +15,6 @@
     "jest-transform-stub": "^2.0.0",
     "parcel-bundler": "^1.6.1",
     "sass": "^1.20.1",
-    "shx": "^0.3.2",
     "tram-blueprints": "^1.0.0",
     "tram-one": "^8.1.1"
   },
@@ -24,12 +22,17 @@
     "tram-one"
   ],
   "babel": {
-    "presets": ["@babel/preset-env"]
+    "presets": [
+      "@babel/preset-env"
+    ]
   },
   "jest": {
     "transform": {
       ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
       "^.+\\.js$": "babel-jest"
     }
+  },
+  "devDependencies": {
+    "parcel-plugin-nuke-dist": "^1.0.0"
   }
 }
