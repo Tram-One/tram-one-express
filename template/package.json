@@ -22,12 +22,17 @@
     "tram-one"
   ],
   "babel": {
-    "presets": ["@babel/preset-env"]
+    "presets": [
+      "@babel/preset-env"
+    ]
   },
   "jest": {
     "transform": {
       ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
       "^.+\\.js$": "babel-jest"
     }
+  },
+  "devDependencies": {
+    "parcel-plugin-nuke-dist": "^1.0.0"
   }
 }
