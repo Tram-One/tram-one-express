@@ -7,11 +7,11 @@
     "test": "jest src --watch"
   },
   "dependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/cli": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
+    "@babel/core": "^7.6.4",
+    "@babel/cli": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
     "babel-jest": "^24.8.0", 
-    "babel-polyfill": "^7.5.5", 
+    "@babel/polyfill": "^7.6.0", 
     "jest": "^24.8.0",
     "jest-transform-stub": "^2.0.0",
     "parcel-bundler": "^1.6.1",
