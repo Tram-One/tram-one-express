@@ -51,12 +51,12 @@ processFile('', filePath)
 console.log('Installing NPM Depenedencies')
 execSync('npm install', {cwd: projectPath, stdio: 'inherit'})
 console.log('Initializing a git repository')
-console.log('Making the initial commit !')
+console.log('Making the initial commit')
 const simplegit = git(projectPath)
-simplegit.init().add('./*').commit('Init Tram-One-App !', (e, d) => {
-  if (e) console.log(e)
+simplegit.init().add('.').commit('Initial commit from Tram-One Express', (err, data) => {
+  if (err) console.log(err)
   else {
-    console.log(d)
+    console.log(data)
   }
 })
 console.log('')
