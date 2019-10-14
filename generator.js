@@ -50,13 +50,14 @@ console.log('Copying over project files')
 processFile('', filePath)
 console.log('Installing NPM Depenedencies')
 execSync('npm install', {cwd: projectPath, stdio: 'inherit'})
-console.log("Initializing a git repository");
-console.log("Making the initial commit !");
-const simplegit = git(projectPath);
-simplegit.init().add('./*').commit("Init Tram-One-App !",(e,d) => {
-  if(e) console.log(e);
-  else
-  console.log(d);
+console.log('Initializing a git repository')
+console.log('Making the initial commit !')
+const simplegit = git(projectPath)
+simplegit.init().add('./*').commit('Init Tram-One-App !', (e, d) => {
+  if (e) console.log(e)
+  else {
+    console.log(d)
+  }
 })
 console.log('')
 console.log('Finished!')
