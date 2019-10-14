@@ -3,6 +3,7 @@
 const path = require('path')
 const {execSync} = require('child_process')
 const fs = require('fs-extra')
+const git = require('simple-git')
 
 const appTitle = process.argv[2] || 'tram-one-app'
 
@@ -43,11 +44,21 @@ const processFile = (file, currentPath) => {
 
 const filePath = path.join(__dirname, 'template')
 const projectPath = path.join(process.cwd(), appTitle)
+
 console.log(`Creating ${projectPath} `)
 console.log('Copying over project files')
 processFile('', filePath)
 console.log('Installing NPM Depenedencies')
 execSync('npm install', {cwd: projectPath, stdio: 'inherit'})
+console.log('Initializing a git repository')
+console.log('Making the initial commit')
+const simplegit = git(projectPath)
+simplegit.init().add('.').commit('Initial commit from Tram-One Express', (err) => {
+  if (err) console.log('Failed to create commit')
+  else {
+    console.log('Successfully created commit')
+  }
+})
 console.log('')
 console.log('Finished!')
 console.log(`Navigate to '${appTitle}', and run 'npm start' to get started!`)

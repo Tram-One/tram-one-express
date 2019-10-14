@@ -15,7 +15,7 @@
   "scripts": {
     "lint": "xo generator.js",
     "generate-example": "npm run example-generate",
-    "example-generate": "rm -rf tram-one-example && node generator.js tram-one-example",
+    "example-generate": "shx rm -rf tram-one-example && node generator.js tram-one-example",
     "example-build": "cd ./tram-one-example && npm run build",
     "example-test": "cd ./tram-one-example && npm test",
     "ci-run": "node tests/circleci-run.js"
@@ -32,6 +32,8 @@
     "nightmare": "^3.0.1",
     "node-fetch": "^2.1.2",
     "require-yml": "^1.3.1",
+    "simple-git": "^1.126.0",
+    "shx": "^0.3.2",
     "superstatic": "^6.0.4",
     "testem": "^2.14.0",
     "xo": "^0.23.0"
