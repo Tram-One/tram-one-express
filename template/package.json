@@ -34,6 +34,7 @@
     }
   },
   "devDependencies": {
+    "eslint-config-tram-one": "^3.0.0",
     "parcel-plugin-nuke-dist": "^1.0.0"
   },
   "xo": {
