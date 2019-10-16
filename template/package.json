@@ -4,7 +4,8 @@
   "scripts": {
     "start": "parcel src/index.html --open",
     "build": "parcel build src/index.html",
-    "test": "jest src --watch"
+    "test": "jest src --watch",
+    "lint": "xo"
   },
   "dependencies": {
     "@babel/core": "7.2.0",
