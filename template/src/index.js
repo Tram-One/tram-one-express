@@ -1,4 +1,5 @@
-import "babel-polyfill";
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 import { registerHtml, start } from "tram-one"
 import ColorHeader from "./components/ColorHeader"
 import "./styles.css"
