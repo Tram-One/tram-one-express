@@ -24,9 +24,7 @@
   "repository": "https://github.com/jrjurman/tram-one-express",
   "license": "MIT",
   "dependencies": {
-    "fs-extra": "^4.0.2"
-  },
-  "devDependencies": {
+    "fs-extra": "^4.0.2",
     "eslint-config-tram-one": "^3.0.0",
     "jasmine": "^3.1.0",
     "nightmare": "^3.0.1",
