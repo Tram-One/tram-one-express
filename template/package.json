@@ -16,7 +16,9 @@
     "sass": "^1.20.1",
     "tram-blueprints": "^1.0.0",
     "tram-one": "^8.1.1",
-    "xo": "^0.23.0"
+    "xo": "^0.23.0",
+    "eslint-config-tram-one": "^3.0.0",
+    "parcel-plugin-nuke-dist": "^1.0.0"
   },
   "keywords": [
     "tram-one"
@@ -31,10 +33,6 @@
       ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
       "^.+\\.js$": "babel-jest"
     }
-  },
-  "devDependencies": {
-    "eslint-config-tram-one": "^3.0.0",
-    "parcel-plugin-nuke-dist": "^1.0.0"
   },
   "xo": {
     "extends": [
