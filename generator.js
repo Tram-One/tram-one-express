@@ -54,8 +54,9 @@ console.log('Initializing a git repository')
 console.log('Making the initial commit')
 const simplegit = git(projectPath)
 simplegit.init().add('.').commit('Initial commit from Tram-One Express', err => {
-	if (err) console.log('Failed to create commit')
-	else {
+	if (err) {
+		console.log('Failed to create commit')
+	} else {
 		console.log('Successfully created commit')
 	}
 })
