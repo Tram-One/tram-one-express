@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.3.1",
+    "eslint-config-tram-one": "^3.0.0",
     "jest": "^24.8.0",
     "jest-transform-stub": "^2.0.0",
     "parcel-bundler": "^1.6.1",
@@ -16,9 +17,8 @@
     "sass": "^1.20.1",
     "tram-blueprints": "^1.0.0",
     "tram-one": "^8.1.1",
-    "xo": "^0.23.0",
-    "eslint-config-tram-one": "^3.0.0",
-    "parcel-plugin-nuke-dist": "^1.0.0"
+    "parcel-plugin-nuke-dist": "^1.0.0",
+    "xo": "^0.23.0"
   },
   "keywords": [
     "tram-one"
