@@ -34,7 +34,7 @@ const processFile = (file, currentPath) => {
 		const newFile = fs.readFileSync(filePath)
 		if ((filePath.match(/.*\.(png|ttf)/)) || filePath.match(/.gitignore/)) {
 			fs.appendFileSync(newFilePath, newFile)
-		} else if(filePath.match(/.npmignore/)) {
+		} else if (filePath.match(/.npmignore/)) {
 			const gitignore = newFile.toString().replace('.npmignore', '.gitignore')
 			fs.appendFileSync(newFilePath, gitignore)
 		} else {
