@@ -32,8 +32,11 @@ const processFile = (file, currentPath) => {
 		console.warn(`File ${newFilePath} already exists`)
 	} else {
 		const newFile = fs.readFileSync(filePath)
-		if (filePath.match(/.*\.(png|ttf)/)) {
+		if ((filePath.match(/.*\.(png|ttf)/)) || filePath.match(/.gitignore/)) {
 			fs.appendFileSync(newFilePath, newFile)
+		} else if(filePath.match(/.npmignore/)) {
+			const gitignore = newFile.toString().replace('.npmignore', '.gitignore')
+			fs.appendFileSync(newFilePath, gitignore)
 		} else {
 			// if it's not a binary file, treat it as a template
 			const templateFile = newFile.toString().replace(/%TITLE%/g, appTitle)
