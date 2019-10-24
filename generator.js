@@ -32,9 +32,11 @@ const processFile = (file, currentPath) => {
 		console.warn(`File ${newFilePath} already exists`)
 	} else {
 		const newFile = fs.readFileSync(filePath)
-		if ((filePath.match(/.*\.(png|ttf)/)) || filePath.match(/.gitignore/)) {
+		if (filePath.match(/.*\.(png|ttf)/)) {
 			fs.appendFileSync(newFilePath, newFile)
 		} else if (filePath.match(/.npmignore/)) {
+			// the gitignore file becomes an npmignore and we need to
+			// change it back when laying down the project
 			const gitignore = newFile.toString().replace('.npmignore', '.gitignore')
 			fs.appendFileSync(newFilePath, gitignore)
 		} else {
