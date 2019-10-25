@@ -1,12 +1,15 @@
 import ColorHeader from './ColorHeader'
+import useColor from ''
 
 const mockColor = '#e6ef9f'
 const mockUpdateColor = jest.fn()
 
 // mock and spy on tram-one hooks
-jest.mock('../../hooks/ColorHook', () => ({
-	...(jest.requireActual('../../hooks/ColorHook')),
-	useColor: () => [mockColor, mockUpdateColor]
+jest.mock('../../hooks/useColor', () => ({
+  __esModule: true, // this property makes it work
+  default: () => {
+    return [mockColor, mockUpdateColor]
+  }
 }))
 
 describe('ColorHeader', () => {

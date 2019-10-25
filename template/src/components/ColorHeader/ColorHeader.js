@@ -1,6 +1,6 @@
 import {registerHtml} from 'tram-one'
 import './ColorHeader.scss'
-import { useColor } from '../../hooks/ColorHook'
+import useColor from '../../hooks/useColor'
 
 const html = registerHtml()
 
