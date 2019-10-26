@@ -2,8 +2,8 @@
   "name": "%TITLE%",
   "version": "1.0.0",
   "scripts": {
-    "start": "parcel src/index.html --open",
-    "build": "parcel build src/index.html",
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html",
     "test": "jest src --watch",
     "lint": "xo"
   },
