@@ -1,5 +1,4 @@
 import ColorHeader from './ColorHeader'
-import useColor from ''
 
 const mockColor = '#e6ef9f'
 const mockUpdateColor = jest.fn()
