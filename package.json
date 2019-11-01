@@ -27,6 +27,7 @@
   "repository": "https://github.com/jrjurman/tram-one-express",
   "license": "MIT",
   "dependencies": {
+    "commander": "^3.0.2",
     "fs-extra": "^4.0.2",
     "simple-git": "^1.126.0"
   },
