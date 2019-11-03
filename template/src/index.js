@@ -1,6 +1,6 @@
 import 'core-js/stable'
 import 'regenerator-runtime/runtime'
-import {registerHtml, start} from 'tram-one'
+import { registerHtml, start } from 'tram-one'
 import ColorHeader from './components/ColorHeader'
 import './styles.css'
 import useColor from './hooks/useColor'
@@ -10,7 +10,7 @@ const html = registerHtml({
 })
 
 const home = () => {
-  const [color] = useColor()
+	const [color] = useColor()
 	return html`
     <div>
       <ColorHeader />

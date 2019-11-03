@@ -5,10 +5,10 @@ const mockUpdateColor = jest.fn()
 
 // mock and spy on tram-one hooks
 jest.mock('../../hooks/useColor', () => ({
-  __esModule: true, // this property makes it work
-  default: () => {
-    return [mockColor, mockUpdateColor]
-  }
+	__esModule: true, // this property makes it work
+	default: () => {
+		return [mockColor, mockUpdateColor]
+	}
 }))
 
 describe('ColorHeader', () => {

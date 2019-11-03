@@ -29,7 +29,7 @@
     "fs-extra": "^4.0.2"
   },
   "devDependencies": {
-    "eslint-config-tram-one": "^3.0.0",
+    "eslint-config-tram-one": "^4.0.0",
     "gh-pages": "^2.1.1",
     "jasmine": "^3.1.0",
     "nightmare": "^3.0.1",

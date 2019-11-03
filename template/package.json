@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.3.1",
-    "eslint-config-tram-one": "^3.0.0",
+    "eslint-config-tram-one": "^4.0.0",
     "jest": "^24.8.0",
     "jest-transform-stub": "^2.0.0",
     "parcel-bundler": "^1.6.1",
