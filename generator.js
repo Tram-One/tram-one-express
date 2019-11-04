@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 
 const path = require('path')
-const {execSync} = require('child_process')
+const { execSync } = require('child_process')
 const fs = require('fs-extra')
 const git = require('simple-git')
 
@@ -55,7 +55,7 @@ const init = async () => {
 	console.log('Copying over project files')
 	processFile('', filePath)
 	console.log('Installing NPM Depenedencies')
-	execSync('npm install', {cwd: projectPath, stdio: 'inherit'})
+	execSync('npm install', { cwd: projectPath, stdio: 'inherit' })
 	console.log('Initializing a git repository')
 	console.log('Making the initial commit')
 	const simplegit = git(projectPath)

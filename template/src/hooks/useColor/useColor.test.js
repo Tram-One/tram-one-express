@@ -1,15 +1,15 @@
-import useColor from "./useColor"
+import useColor from './useColor'
 
 describe('Color', () => {
-	it('Should return a valid color', () => {
-    const [color, _] = useColor()
+	it('should return default color', () => {
+		const [color] = useColor()
 		expect(color).toEqual('#e6ef9f')
 	})
-    
-  it('Should incremented the color', () => {
-    const [_, incrementColor] = useColor()
-    incrementColor()
-    const [color] = useColor()
-    expect(color).toEqual('#a09fef')
-  })
+
+	it('should change value on incrementColor', () => {
+		const [, incrementColor] = useColor()
+		incrementColor()
+		const [color] = useColor()
+		expect(color).toEqual('#a09fef')
+	})
 })
