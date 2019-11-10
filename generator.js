@@ -4,12 +4,12 @@ const path = require('path')
 const { execSync } = require('child_process')
 const fs = require('fs-extra')
 const git = require('simple-git/promise')
-const commander = require('commander');
+const commander = require('commander')
 
 const appTitle = process.argv[2] || 'tram-one-app'
 
 commander
-    .option('--no-commit', 'skips making an initial git commit')
+	.option('--no-commit', 'skips making an initial git commit')
 	.option('--no-install', 'skips installing node dependencies')
 commander.parse(process.argv)
 
