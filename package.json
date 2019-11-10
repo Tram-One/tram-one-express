@@ -1,6 +1,6 @@
 {
   "name": "tram-one-express",
-  "version": "16.0.1",
+  "version": "16.1.0",
   "description": "Generator to build Tram-One applications quickly",
   "bin": "./generator.js",
   "files": [
@@ -27,6 +27,7 @@
   "repository": "https://github.com/jrjurman/tram-one-express",
   "license": "MIT",
   "dependencies": {
+    "commander": "^3.0.2",
     "fs-extra": "^4.0.2",
     "simple-git": "^1.126.0"
   },

@@ -4,8 +4,14 @@ const path = require('path')
 const { execSync } = require('child_process')
 const fs = require('fs-extra')
 const git = require('simple-git/promise')
+const commander = require('commander')
 
 const appTitle = process.argv[2] || 'tram-one-app'
+
+commander
+	.option('--no-commit', 'skips making an initial git commit')
+	.option('--no-install', 'skips installing node dependencies')
+commander.parse(process.argv)
 
 const processFile = (file, currentPath) => {
 	const filePath = path.join(currentPath, file)
@@ -51,21 +57,31 @@ const init = async () => {
 	const filePath = path.join(__dirname, 'template')
 	const projectPath = path.join(process.cwd(), appTitle)
 
+	// laying down the project files
 	console.log(`Creating ${projectPath} `)
 	console.log('Copying over project files')
 	processFile('', filePath)
-	console.log('Installing NPM Depenedencies')
-	execSync('npm install', { cwd: projectPath, stdio: 'inherit' })
-	console.log('Initializing a git repository')
-	console.log('Making the initial commit')
-	try {
-		const simplegit = git(projectPath)
-		await simplegit.init()
-		await simplegit.add('.')
-		await simplegit.commit('Initial commit from Tram-One Express')
-		console.log('Successfully created commit')
-	} catch (error) {
-		console.log('Failed to create commit')
+
+	// making an initial commit for git
+	if (commander.commit) {
+		console.log('Initializing a git repository')
+
+		try {
+			const simplegit = git(projectPath)
+			console.log('Making the initial commit')
+			await simplegit.init()
+			await simplegit.add('.')
+			await simplegit.commit('Initial commit from Tram-One Express')
+			console.log('Successfully created commit')
+		} catch (error) {
+			console.log('Failed to create commit')
+		}
+	}
+
+	// installing node dependencies
+	if (commander.install) {
+		console.log('Installing NPM Depenedencies')
+		execSync('npm install', { cwd: projectPath, stdio: 'inherit' })
 	}
 
 	console.log('')
