@@ -1,6 +1,6 @@
 {
   "name": "tram-one-express",
-  "version": "16.1.0",
+  "version": "17.0.0",
   "description": "Generator to build Tram-One applications quickly",
   "bin": "./generator.js",
   "files": [
@@ -18,10 +18,10 @@
     "example-generate": "rm -rf tram-one-example && node generator.js tram-one-example",
     "example-build": "cd ./tram-one-example && npm run build",
     "example-test": "cd ./tram-one-example && npm test",
-    "example-test-ci": "cd ./tram-one-example && npx jest src",
+    "example-test-ci": "cd ./tram-one-example && npx jest",
     "example-lint": "cd ./tram-one-example && npm run lint",
     "ci-run": "node tests/circleci-run.js",
-    "postpublish": "npm run example-generate && rm -rf ./tram-one-example/node_modules && gh-pages -d tram-one-example -b tram-one-example"
+    "postpublish": "rm -rf tram-one-example && node generator.js tram-one-example --no-install --no-commit && gh-pages -d tram-one-example -b tram-one-example"
   },
   "author": "Jesse Jurman",
   "repository": "https://github.com/jrjurman/tram-one-express",
