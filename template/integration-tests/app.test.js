@@ -12,7 +12,7 @@ describe('app', () => {
 	})
 
 	it('should mount the app with a header', () => {
-		expect(getByRole(document, 'heading').innerHTML).toMatch('tram-one-example')
+		expect(getByRole(document, 'heading').innerHTML).toMatch('%TITLE%')
 	})
 
 	it('should update the color on click', () => {
