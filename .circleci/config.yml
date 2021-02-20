@@ -4,25 +4,25 @@
 #
 version: 2
 jobs:
-	build:
-		docker:
-			# specify the version you desire here
-			- image: circleci/node:latest
+  build:
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:latest
 
-			# Specify service dependencies here if necessary
-			# CircleCI maintains a library of pre-built images
-			# documented at https://circleci.com/docs/2.0/circleci-images/
-			# - image: circleci/mongo:3.4.4
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/mongo:3.4.4
 
-		working_directory: ~/tram-one
+    working_directory: ~/tram-one
 
-		steps:
-			- checkout
+    steps:
+      - checkout
 
-			- run: npm ci
+      - run: npm ci
 
-			- run: npm run lint
+      - run: npm run lint
 
-			- run: npm run example-generate
-			- run: npm run example-build
-			- run: npm run example-test-ci
+      - run: npm run example-generate
+      - run: npm run example-build
+      - run: npm run example-test-ci
