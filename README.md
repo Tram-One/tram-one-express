@@ -19,22 +19,26 @@ $ npx tram-one-express app-name
 This will create a directory in your current directory with the name that you pass into tram-one-express.
 
 ## What's in the box
-Below are a list of files and directories that are created after running tram-one-express
+The scaffolded project includes the build tooling, tests, and a sample of components and hooks that use the Tram-One API.
+Below are a list of files and directories that are created after running tram-one-express.
 ```
 app-name/
-├── src
-│   ├── components
-│   │   └── ColorHeader
-│   │       ├── ColorHeader.js
-│   │       ├── ColorHeader.scss
-│   │       ├── ColorHeader.test.js
-│   │       └── index.js
-│   ├── index.js
-│   └── styles.css
-├── .gitignore
 ├── index.html
+├── integration-tests
+│   └── app.test.js
+├── jest.config.js
 ├── package.json
-└── README.md
+├── package-lock.json
+├── README.md
+└── src
+    ├── app-header.js
+    ├── app-summary.js
+    ├── app-task-description.js
+    ├── app-task-item.js
+    ├── app-task-list.js
+    ├── index.js
+    ├── styles.css
+    └── use-task-list.js
 ```
 
 ## Developement Commands
@@ -43,4 +47,4 @@ Below are a list of commands used for developement. The logic for all the comman
 - `npm run example-generate` - creates an example app and installs dependencies in the example
 - `npm run example-build` - runs `npm run build` in the example project
 - `npm run example-test` - runs the test suite for the example app
-- `ci-run` - runs all the commands in the order that circleci would trigger them, one automatically after the other
+- `npm run ci-run` - runs all the commands in the order that circleci would trigger them, one automatically after the other

@@ -19,7 +19,6 @@
     "example-build": "cd ./tram-one-example && npm run build",
     "example-test": "cd ./tram-one-example && npm test",
     "example-test-ci": "cd ./tram-one-example && npx jest",
-    "example-lint": "cd ./tram-one-example && npm run lint",
     "ci-run": "node tests/circleci-run.js",
     "postpublish": "rm -rf tram-one-example && node generator.js tram-one-example --no-install --no-commit && gh-pages -d tram-one-example -b tram-one-example"
   },
