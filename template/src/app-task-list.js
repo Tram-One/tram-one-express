@@ -20,8 +20,8 @@ export default () => {
 		`
 	)
 	return html`
-    <div class="app-task-list">
+		<div class="app-task-list">
 			${taskListItems}
 		</div>
-  `
+	`
 }

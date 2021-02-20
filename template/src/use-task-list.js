@@ -64,5 +64,5 @@ const tasks = [
  * This hook is global, and can be used / mutated anywhere to update the state in the entire app.
  */
 export default () => {
-  return useGlobalStore('TASK_LIST', tasks)
+	return useGlobalStore('TASK_LIST', tasks)
 }

@@ -31,5 +31,5 @@ export default (props) => {
 			<input type="checkbox" onchange=${updateStatus} ${selectedTask.completed ? 'checked' : ''} />
 			<a href="/${selectedTask.id}" onclick=${showDescription}>${selectedTask.label}</a>
 		</label>
-  `
+	`
 }

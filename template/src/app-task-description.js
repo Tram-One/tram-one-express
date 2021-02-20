@@ -26,5 +26,5 @@ export default () => {
 			<h2>${selectedTask.label}</h2>
 			${selectedTask.description}
 		</div>
-  `
+	`
 }

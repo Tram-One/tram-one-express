@@ -15,5 +15,5 @@ export default () => {
 		<p class="app-summary">
 			There are ${completedTasks.length} out of ${tasks.length} tasks completed
 		</p>
-  `
+	`
 }

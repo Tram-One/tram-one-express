@@ -14,24 +14,24 @@ import './styles.css'
 
 const html = registerHtml({
 	'app-header': AppHeader,
-  'app-summary': AppSummary,
-  'app-task-list': AppTaskList,
-  'app-task-description': appTaskDescription,
+	'app-summary': AppSummary,
+	'app-task-list': AppTaskList,
+	'app-task-description': appTaskDescription,
 })
 
 const home = () => {
-  useEffect(() => {
-    console.log('Thanks for using Tram-One!')
-  })
+	useEffect(() => {
+		console.log('Thanks for using Tram-One!')
+	})
 	return html`
-    <main>
-      <app-header>%TITLE% checklist</app-header>
-      <app-summary />
-      <app-task-list />
-      <hr />
-      <app-task-description />
-    </main>
-  `
+		<main>
+			<app-header>%TITLE% checklist</app-header>
+			<app-summary />
+			<app-task-list />
+			<hr />
+			<app-task-description />
+		</main>
+	`
 }
 
 // start the app on a div with id="app"
