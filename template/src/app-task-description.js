@@ -10,7 +10,7 @@ const html = registerHtml()
 
 const defaultDescription = {
 	label: 'Thank you for trying Tram-One',
-	description: 'Hover over any of the items above to learn more!'
+	description: 'Click on any of the items above to learn more!'
 }
 
 export default () => {

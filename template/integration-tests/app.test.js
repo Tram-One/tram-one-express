@@ -36,7 +36,7 @@ describe('%TITLE%', () => {
 		expect(descriptionHeader).toBeInTheDocument()
 
 		// verify the description appears on the page
-		const descriptionParagraph = getByText(document, 'Hover over any of the items above to learn more!')
+		const descriptionParagraph = getByText(document, 'Click on any of the items above to learn more!')
 		expect(descriptionParagraph).toBeInTheDocument()
 	})
 
