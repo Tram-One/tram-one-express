@@ -4,8 +4,7 @@
   "scripts": {
     "start": "parcel index.html --open",
     "build": "parcel build index.html",
-    "test": "jest --watch",
-    "test:ci": "jest --coverage"
+    "test": "jest --watch"
   },
   "dependencies": {
     "@babel/core": "^7.12.16",
