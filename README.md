@@ -23,22 +23,22 @@ The scaffolded project includes the build tooling, tests, and a sample of compon
 Below are a list of files and directories that are created after running tram-one-express.
 ```
 app-name/
+├── src
+│   ├── app-header.js
+│   ├── app-summary.js
+│   ├── app-task-description.js
+│   ├── app-task-item.js
+│   ├── app-task-list.js
+│   ├── index.js
+│   ├── styles.css
+│   └── use-task-list.js
 ├── index.html
 ├── integration-tests
 │   └── app.test.js
 ├── jest.config.js
 ├── package.json
 ├── package-lock.json
-├── README.md
-└── src
-    ├── app-header.js
-    ├── app-summary.js
-    ├── app-task-description.js
-    ├── app-task-item.js
-    ├── app-task-list.js
-    ├── index.js
-    ├── styles.css
-    └── use-task-list.js
+└── README.md
 ```
 
 ## Developement Commands
