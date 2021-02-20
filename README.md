@@ -38,6 +38,7 @@ app-name/
 ├── jest.config.js
 ├── package.json
 ├── package-lock.json
+├── .gitignore
 └── README.md
 ```
 
