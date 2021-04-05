@@ -43,7 +43,7 @@ const processFile = (file, currentPath) => {
 		} else if (filePath.match(/.npmignore/)) {
 			// the gitignore file becomes an npmignore and we need to
 			// change it back when laying down the project
-			const gitignorePath = newFilePath.toString().replace('.npmignore', '.gitignore')
+			const gitignorePath = newFilePath.toString().replace('gitignore', '.gitignore')
 			fs.appendFileSync(gitignorePath, newFile)
 		} else {
 			// if it's not a binary file, treat it as a template
