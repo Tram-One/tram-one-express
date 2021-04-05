@@ -20,7 +20,7 @@
     "regenerator-runtime": "^0.13.7",
     "sass": "^1.32.7",
     "tram-blueprints": "^1.1.0",
-    "tram-one": "^10.0.3"
+    "tram-one": "^10.1.0"
   },
   "keywords": [
     "tram-one"
