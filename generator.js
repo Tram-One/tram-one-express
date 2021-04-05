@@ -40,7 +40,7 @@ const processFile = (file, currentPath) => {
 		const newFile = fs.readFileSync(filePath)
 		if (filePath.match(/.*\.(png|ttf)/)) {
 			fs.appendFileSync(newFilePath, newFile)
-		} else if (filePath.match(/.npmignore/)) {
+		} else if (filePath.match(/gitignore/)) {
 			// the gitignore file becomes an npmignore and we need to
 			// change it back when laying down the project
 			const gitignorePath = newFilePath.toString().replace('gitignore', '.gitignore')
