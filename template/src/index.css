@@ -1,0 +1,21 @@
+:root {
+  font-family: "Poppins", sans-serif;
+  font-size: calc(10px + 2vmin);
+  color-scheme: dark light;
+}
+
+body {
+  margin: 0px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    background: #002229;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    background: #e9ebeb;
+  }
+}

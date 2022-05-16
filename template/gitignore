@@ -2,7 +2,7 @@
 dist
 
 # Parcel Dev Artifacts
-.cache
+.parcel-cache
 
 # Logs
 logs

@@ -84,7 +84,7 @@ const init = async () => {
 	// installing node dependencies
 	if (options.install) {
 		console.log('Installing NPM Depenedencies');
-		execSync('npm install', { cwd: projectPath, stdio: 'inherit' });
+		execSync('npm ci', { cwd: projectPath, stdio: 'inherit' });
 	} else {
 		console.log('Skipping installing NPM depenedencies, run `npm ci` to get all dependencies required');
 	}

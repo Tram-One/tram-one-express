@@ -1,0 +1,12 @@
+.app {
+  display: grid;
+  place-content: center;
+  align-items: center;
+  justify-items: center;
+  min-height: 100vh;
+}
+
+.logo {
+  pointer-events: none;
+  width: 40vmin;
+}

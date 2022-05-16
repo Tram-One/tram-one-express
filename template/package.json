@@ -1,33 +1,28 @@
 {
   "name": "%TITLE%",
   "version": "1.0.0",
+  "private": true,
+  "source": "src/index.html",
   "scripts": {
-    "start": "parcel index.html --open",
-    "build": "parcel build index.html",
-    "test": "jest --watch"
+    "start": "parcel --open",
+    "build": "parcel build",
+    "test": "jest --watch",
+    "predeploy": "npm run build -- --public-url /%TITLE%",
+    "deploy": "gh-pages -d dist -b gh-pages"
   },
   "dependencies": {
-    "@babel/core": "^7.12.16",
-    "@testing-library/dom": "^7.29.4",
-    "@testing-library/jest-dom": "^5.11.9",
-    "core-js": "^3.8.3",
-    "eslint-config-tram-one": "^4.0.0",
-    "jest": "^26.6.3",
-    "jest-environment-jsdom-fourteen": "^1.0.1",
-    "jest-transform-css": "^2.1.0",
-    "parcel-bundler": "^1.12.4",
-    "parcel-plugin-nuke-dist": "^1.0.1",
-    "regenerator-runtime": "^0.13.7",
-    "sass": "^1.32.7",
-    "tram-blueprints": "^1.1.0",
-    "tram-one": "^10.1.0"
-  },
-  "keywords": [
-    "tram-one"
-  ],
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ]
+    "@parcel/babel-preset-env": "^2.5.0",
+    "@testing-library/dom": "^8.13.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@tram-one/tram-logo": "^4.0.0",
+    "babel-jest": "^28.1.0",
+    "gh-pages": "^4.0.0",
+    "jest": "^28.1.0",
+    "jest-environment-jsdom": "^28.1.0",
+    "jest-transform-stub": "^2.0.0",
+    "parcel": "^2.5.0",
+    "prettier": "^2.6.2",
+    "tram-one": "^12.0.2",
+    "ts-jest": "^28.0.2"
   }
 }
