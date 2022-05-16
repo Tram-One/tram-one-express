@@ -13,7 +13,6 @@
 		"generator"
 	],
 	"scripts": {
-		"lint": "xo generator.js",
 		"generate-example": "npm run example-generate",
 		"example-generate": "rm -rf tram-one-example && node generator.js tram-one-example",
 		"example-build": "cd ./tram-one-example && npm run build",
@@ -26,19 +25,12 @@
 	"repository": "https://github.com/jrjurman/tram-one-express",
 	"license": "MIT",
 	"dependencies": {
-		"commander": "^3.0.2",
-		"fs-extra": "^4.0.2",
-		"simple-git": "^1.126.0"
+		"commander": "^9.2.0",
+		"fs-extra": "^10.1.0",
+		"simple-git": "^3.7.1"
 	},
 	"devDependencies": {
-		"eslint-config-tram-one": "^4.0.0",
-		"gh-pages": "^2.1.1",
-		"require-yml": "^1.3.2",
-		"xo": "^0.23.0"
-	},
-	"xo": {
-		"extends": [
-			"tram-one"
-		]
+		"gh-pages": "^4.0.0",
+		"require-yml": "^2.0.0"
 	}
 }
