@@ -47,6 +47,11 @@ const processFile = (file, currentPath) => {
 			// change it back when laying down the project
 			const gitignorePath = newFilePath.toString().replace('gitignore', '.gitignore');
 			fs.appendFileSync(gitignorePath, newFile);
+		} else if (filePath.match(/template-lock.json/)) {
+			// the package-lock.json file is ignored and we need to
+			// change it back when laying down the project
+			const packageLockPath = newFilePath.toString().replace('template-lock.json', 'package-lock.json');
+			fs.appendFileSync(packageLockPath, newFile);
 		} else {
 			// if it's not a binary file, treat it as a template
 			const templateFile = newFile
