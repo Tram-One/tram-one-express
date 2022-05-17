@@ -12,5 +12,5 @@
 .tram-one-logo {
   pointer-events: none;
   width: 40vmin;
-  aspect-ratio: 1 / 1;
+  height: 40vmin;
 }
