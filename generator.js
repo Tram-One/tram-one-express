@@ -11,6 +11,7 @@ const appTitle = process.argv[2] || 'tram-one-app';
 program
 	.option('--no-commit', 'skips making an initial git commit')
 	.option('--no-install', 'skips installing node dependencies')
+	.option('--url [url]', 'public url used for deployments (defaults to project name)', appTitle)
 	.parse();
 
 const options = program.opts();
@@ -48,7 +49,10 @@ const processFile = (file, currentPath) => {
 			fs.appendFileSync(gitignorePath, newFile);
 		} else {
 			// if it's not a binary file, treat it as a template
-			const templateFile = newFile.toString().replace(/%TITLE%/g, appTitle);
+			const templateFile = newFile
+				.toString()
+				.replace(/%TITLE%/g, appTitle)
+				.replace(/%URL%/g, options.url);
 			fs.appendFileSync(newFilePath, templateFile);
 		}
 	}
@@ -61,6 +65,9 @@ const init = async () => {
 	// laying down the project files
 	console.log(`Creating ${projectPath} `);
 	console.log('Copying over project files');
+	if (options.url !== appTitle) {
+		console.log(`Found unique public url, using ${options.url}`);
+	}
 	processFile('', filePath);
 
 	// making an initial commit for git

@@ -7,14 +7,14 @@
     "start": "parcel --open",
     "build": "parcel build",
     "test": "jest --watch",
-    "predeploy": "npm run build -- --public-url /%TITLE%",
+    "predeploy": "npm run build -- --public-url /%URL%",
     "deploy": "gh-pages -d dist -b gh-pages"
   },
   "dependencies": {
     "@parcel/babel-preset-env": "^2.5.0",
     "@testing-library/dom": "^8.13.0",
     "@testing-library/jest-dom": "^5.16.4",
-    "@tram-one/tram-logo": "^4.0.0",
+    "@tram-one/tram-logo": "^4.1.0",
     "babel-jest": "^28.1.0",
     "gh-pages": "^4.0.0",
     "jest": "^28.1.0",
