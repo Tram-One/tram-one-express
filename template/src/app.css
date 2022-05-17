@@ -9,7 +9,8 @@
   min-height: 100vh;
 }
 
-.logo {
+.tram-one-logo {
   pointer-events: none;
   width: 40vmin;
+  aspect-ratio: 1 / 1;
 }
