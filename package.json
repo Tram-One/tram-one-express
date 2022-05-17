@@ -1,6 +1,6 @@
 {
 	"name": "tram-one-express",
-	"version": "19.0.0",
+	"version": "19.0.1",
 	"description": "Generator to build Tram-One applications quickly",
 	"bin": "./generator.js",
 	"files": [
@@ -14,15 +14,15 @@
 	],
 	"scripts": {
 		"generate-example": "npm run example-generate",
-		"example-generate": "rm -rf tram-one-example && node generator.js tram-one-example",
+		"example-generate": "rm -rf tram-one-example && node generator.js tram-one-example --no-commit",
 		"example-build": "cd ./tram-one-example && npm run build",
 		"example-test": "cd ./tram-one-example && npm test",
 		"example-test-ci": "cd ./tram-one-example && npx jest",
 		"ci-run": "node tests/circleci-run.js",
-		"deploy-example": "gh-pages -d tram-one-example -b tram-one-example",
-		"example-deploy": "cd ./tram-one-example && npm ci && npm run deploy",
 		"postpublish:build": "rm -rf tram-one-example && node generator.js tram-one-example --no-install --no-commit --url tram-one-express",
-		"postpublish": "npm run postpublish:build && npm run deploy-example && npm run example-deploy"
+		"postpublish:deploy-repo": "gh-pages -d tram-one-example -b tram-one-example",
+		"postpublish:deploy-app": "cd ./tram-one-example && npm ci && npm run deploy",
+		"postpublish": "npm run postpublish:build && postpublish:deploy && npm run postpublish:deploy-app"
 	},
 	"author": "Jesse Jurman",
 	"repository": "https://github.com/jrjurman/tram-one-express",
