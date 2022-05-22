@@ -1,10 +1,10 @@
-import { registerHtml } from "tram-one";
+import { registerHtml, TramOneComponent } from "tram-one";
 import logo from "@tram-one/tram-logo/dist/element";
 import "./app.css";
 
 const html = registerHtml();
 
-export default () => {
+const app: TramOneComponent = () => {
   return html`
     <main class="app">
       ${logo}
@@ -13,3 +13,5 @@ export default () => {
     </main>
   `;
 };
+
+export default app;
