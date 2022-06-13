@@ -19,7 +19,7 @@
 		"example-test": "cd ./tram-one-example && npm test",
 		"example-test-ci": "cd ./tram-one-example && npx jest",
 		"ci-run": "node tests/circleci-run.js",
-		"example-build:deploy-repo": "gh-pages -d tram-one-example -b $(git branch --show-current) -r https://github.com/Tram-One/tram-one-example.git -u 'CircleCI <>"
+		"example-build:deploy-repo": "gh-pages -d tram-one-example -b $(git branch --show-current) -r https://github.com/Tram-One/tram-one-example.git -u 'JRJurman (via CircleCI) <j.r.jurman@gmail.com>'"
 	},
 	"author": "Jesse Jurman",
 	"repository": "https://github.com/jrjurman/tram-one-express",
