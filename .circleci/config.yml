@@ -29,4 +29,10 @@ jobs:
       - run: npm run example-generate
       - run: npm run example-build
       - run: npm run example-test-ci
+
+      - run:
+          name: Configure User for Branch Push
+          command: |
+            git config user.email "j.r.jurman@gmail.com"
+            git config user.name "CircleCI Job"
       - run: npm run example-build:deploy-repo
