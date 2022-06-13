@@ -17,6 +17,11 @@ jobs:
     working_directory: ~/tram-one
 
     steps:
+      # Add ssh key so we can publish the tram-one-example branch
+      - add_ssh_keys:
+          fingerprints:
+            - '43:c4:8a:71:2d:88:82:08:53:20:60:c6:6f:ed:0a:67'
+
       - checkout
 
       - run: npm ci
