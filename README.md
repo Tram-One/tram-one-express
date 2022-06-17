@@ -23,7 +23,8 @@ This will create a directory in your current directory with the name that you pa
 ## What's in the box
 
 The scaffolded project includes a bare-bones setup that has all the tooling required to get started building!
-See https://github.com/Tram-One/tram-one-express/tree/tram-one-example to see what the project looks like!
+See https://github.com/Tram-One/tram-one-express/tree/master-tram-one-example to see what the project looks like,
+or try it live with codesandbox projects here: https://codesandbox.io/p/github/Tram-One/tram-one-express/master-tram-one-example
 
 ## Developement Commands
 
