@@ -1,0 +1,29 @@
+svg.tram-one-logo g {
+  fill: none;
+  stroke-width: 8px;
+}
+svg.tram-one-logo .tram-roof {
+  stroke: #91bfc8;
+}
+svg.tram-one-logo .tram-body {
+  stroke: #ed1c24;
+}
+svg.tram-one-logo .tram-windows g {
+  stroke: white;
+  stroke-width: 5px;
+}
+svg.tram-one-logo .tram-front-light .light-circle {
+  stroke: #fff049;
+  stroke-width: 5px;
+}
+svg.tram-one-logo .tram-front-light .light-rays {
+  fill: #fff049;
+}
+svg.tram-one-logo .front-rail,
+svg.tram-one-logo .back-rail {
+  stroke: #91bfc8;
+}
+svg.tram-one-logo .front-bars path,
+svg.tram-one-logo .back-bars path {
+  fill: #91bfc8;
+}
