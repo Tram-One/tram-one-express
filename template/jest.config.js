@@ -9,7 +9,7 @@ module.exports = {
 
   transform: {
     // handle js and ts modules
-    "^.+\\.(js|ts)?$": "babel-jest",
+    "^.+\\.(js|ts)?$": "ts-jest",
     // stub files that we can't handle
     "^.+\\.(svg|s?css|less)$": "jest-transform-stub",
   },
