@@ -4,7 +4,7 @@
   "private": true,
   "source": "src/index.html",
   "scripts": {
-    "start": "parcel --open",
+    "start": "parcel",
     "build": "parcel build",
     "test": "jest --watch",
     "predeploy": "npm run build -- --public-url /%URL%",

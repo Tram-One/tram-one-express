@@ -1,6 +1,6 @@
 {
 	"name": "tram-one-express",
-	"version": "19.0.2",
+	"version": "19.0.3",
 	"description": "Generator to build Tram-One applications quickly",
 	"bin": "./generator.js",
 	"files": [
@@ -19,10 +19,7 @@
 		"example-test": "cd ./tram-one-example && npm test",
 		"example-test-ci": "cd ./tram-one-example && npx jest",
 		"ci-run": "node tests/circleci-run.js",
-		"postpublish:build": "rm -rf tram-one-example && node generator.js tram-one-example --no-install --no-commit --url tram-one-express",
-		"postpublish:deploy-repo": "gh-pages -d tram-one-example -b tram-one-example",
-		"postpublish:deploy-app": "cd ./tram-one-example && npm ci && npm run deploy",
-		"postpublish": "npm run postpublish:build && npm run postpublish:deploy-repo && npm run postpublish:deploy-app"
+		"example-build:deploy-repo": "gh-pages -d tram-one-example -b $(git branch --show-current)-tram-one-example"
 	},
 	"author": "Jesse Jurman",
 	"repository": "https://github.com/jrjurman/tram-one-express",
